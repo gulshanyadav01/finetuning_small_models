@@ -1,0 +1,27 @@
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Dashboard from './pages/Dashboard';
+import SelectModel from './pages/SelectModel';
+import UploadData from './pages/UploadData';
+import ConfigureTuning from './pages/ConfigureTuning';
+import TuningProgress from './pages/TuningProgress';
+import ModelQuery from './pages/ModelQuery';
+import Settings from './pages/Settings';
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="select-model" element={<SelectModel />} />
+        <Route path="upload-data" element={<UploadData />} />
+        <Route path="configure" element={<ConfigureTuning />} />
+        <Route path="progress" element={<TuningProgress />} />
+        <Route path="query" element={<ModelQuery />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+    </Routes>
+  );
+}
+
+export default App;
